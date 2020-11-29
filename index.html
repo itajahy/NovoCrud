@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase CRUD</title>
+
+  <!-- BOOTSWATCH -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+  <!--Meu CSS-->
+  <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="bg-light">
+
+  <!-- ADD TASK -->
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+
+            <h1 class="h4">CRUD</h1>
+              <div>
+                <img src="img/img0.gif">
+                <form id="task-form">
+                  <div class="form-group">
+                    <input type="text" id="task-title" class="form-control" class="Task Title" placeholder="Escreva seu nome"
+                      autofocus>
+                  </div>
+                  <div class="form-group">
+                    <textarea id="task-description" rows="3" class="form-control" placeholder="Escreva sua mensagem"></textarea>
+                  </div>
+    
+                  <button class="btn btn-primary" id="btn-task-form">
+                    Save
+                  </button>
+    
+                </form>
+              </br>
+                <footer>
+                  by Matheus Itajahy
+                </br>
+                  Ra 117209
+                </footer>
+              </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      <!-- Tasks List -->
+      <div class="col-md-6" id="tasks-container"></div>
+    </div>
+  </div>
+
+  <!-- FIREBASE -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC--_Q3wf3cwkOyXCm5g8fRPQ10-O_7-Gg",
+    authDomain: "meucrud-3691c.firebaseapp.com",
+    databaseURL: "https://meucrud-3691c.firebaseio.com",
+    projectId: "meucrud-3691c",
+    storageBucket: "meucrud-3691c.appspot.com",
+    messagingSenderId: "681641919221",
+    appId: "1:681641919221:web:50e2e4ce412a04dc063bbc"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  <!-- CUSTOM CODE -->
+  <script src="index.js"></script>
+</body>
+
+
+</html>
